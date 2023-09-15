@@ -30,7 +30,7 @@ class TodoRequest(BaseModel):
 
 
 @app.get("/")
-async def read_all(db:db_dependency ):
+async def read_all(db:db_dependency):
     return db.query(Todos).all()
 
 @app.get("/todo/{todo_id}")
